@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin:           ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </div>
+  </body>
+  <script>
+    function toggleBtn() {
+      const Btns = document.querySelector(".btns");
+      const add = document.getElementById("add");
+      const remove = document.getElementById("remove");
+      const btn = document.querySelector(".btns").querySelectorAll("a");
+      Btns.classList.toggle("open");
+      if (Btns.classList.contains("open")) {
+        remove.style.display = "block";
+        add.style.display = "none";
+        btn.forEach((e, i) => {
+          setTimeout(() => {
+            bottom = 40 * i;
+            e.style.bottom = bottom + "px";
+            console.log(e);
+          }, 100 * i);
+        });
+      } else {
+        add.style.display = "block";
+        remove.style.display = "none";
+        btn.forEach((e, i) => {
+          e.style.bottom = "0px";
+        });
+      }
+    }
+  </script>
+</html>
+0;
+}
+
+.fabs {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.action {
+  background: rgb(255, 0, 128);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 5px 7px 0px gray;
+  transition: background-color 0.4s ease-in-out;
+}
