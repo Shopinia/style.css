@@ -1,10 +1,21 @@
-$( ".menu-off" ).click(function() {
-  $( this ).removeClass( "menu-off" );
-  $( this ).addClass( "menu-on" );
- $('.floating-button-menu-close').addClass('menu-on');
-});
-$('.floating-button-menu-close').click(function(){
-  $( this ).addClass( "menu-off" );
-  $( this ).removeClass( "menu-on" );
-  $('.floating-button-menu').toggleClass('menu-on');
-});
+(function() {
+  var speedDialContainer = document.querySelector(".speed-dial");
+  var primaryButton = speedDialContainer.querySelector(
+    ".speed-dial__button--primary"
+  );
+
+  document.addEventListener("click", function(e) {
+    var classList = "speed-dial";
+    var primaryButtonClicked =
+      e.target === primaryButton || primaryButton.contains(e.target);
+    var speedDialIsActive =
+      speedDialContainer.getAttribute("class").indexOf("speed-dial--active") !==
+      -1;
+
+    if (primaryButtonClicked && !speedDialIsActive) {
+      classList += " speed-dial--active";
+    }
+
+    speedDialContainer.setAttribute("class", classList);
+  });
+})();
