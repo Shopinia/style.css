@@ -1,21 +1,15 @@
-(function() {
-  var speedDialContainer = document.querySelector(".speed-dial");
-  var primaryButton = speedDialContainer.querySelector(
-    ".speed-dial__button--primary"
-  );
+window.addEventListener("load", () => {
+            document.body.classList.remove("preload");
+        });
 
-  document.addEventListener("click", function(e) {
-    var classList = "speed-dial";
-    var primaryButtonClicked =
-      e.target === primaryButton || primaryButton.contains(e.target);
-    var speedDialIsActive =
-      speedDialContainer.getAttribute("class").indexOf("speed-dial--active") !==
-      -1;
+        document.addEventListener("DOMContentLoaded", () => {
+            const nav = document.querySelector(".nav");
 
-    if (primaryButtonClicked && !speedDialIsActive) {
-      classList += " speed-dial--active";
-    }
+            document.querySelector("#btnNav").addEventListener("click", () => {
+                nav.classList.add("nav--open");
+            });
 
-    speedDialContainer.setAttribute("class", classList);
-  });
-})();
+            document.querySelector(".nav__overlay").addEventListener("click", () => {
+                nav.classList.remove("nav--open");
+            });
+        });
